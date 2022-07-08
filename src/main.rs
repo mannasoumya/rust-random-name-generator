@@ -25,7 +25,7 @@ fn validate_args(args: Vec<String>) -> (i32, i32) {
         }
     }
     let how_many: i32;
-    let size_of_str: i32;
+    let mut size_of_str: i32;
     if args[1].parse::<i32>().is_ok() {
         how_many = args[1].parse::<i32>().unwrap();
     } else {
@@ -43,6 +43,11 @@ fn validate_args(args: Vec<String>) -> (i32, i32) {
             args[2]
         );
         process::exit(0x0010);
+    }
+
+    if size_of_str < 6 {
+        println!("Minimum length of word is 6 ..Defaulting to 6\n----------------------------------------------");
+        size_of_str = 6;
     }
 
     return (how_many, size_of_str);
@@ -70,7 +75,10 @@ fn generate(n: i32) -> String {
 }
 
 fn generate_all(how_many: i32, size_of_str: i32) {
-    assert!(size_of_str % 2 == 0, "Size of Word must be even;\n See cargo run help");
+    assert!(
+        size_of_str % 2 == 0,
+        "Size of Word must be even;\n See cargo run help"
+    );
     for _ in 0..how_many {
         println!("{}", generate(size_of_str));
     }
