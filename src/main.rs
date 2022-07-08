@@ -33,7 +33,7 @@ fn validate_args(args: Vec<String>) -> (i32, i32) {
             "\nCannot parse i32: `{}`. <how-many-words> must be an integer",
             args[1]
         );
-        process::exit(0x0010);
+        process::exit(0x0001);
     }
     if args[2].parse::<i32>().is_ok() {
         size_of_str = args[2].parse::<i32>().unwrap();
@@ -42,7 +42,7 @@ fn validate_args(args: Vec<String>) -> (i32, i32) {
             "\nCannot parse i32: `{}` . <number-of-characters> must be an integer",
             args[2]
         );
-        process::exit(0x0010);
+        process::exit(0x0001);
     }
 
     if size_of_str < 6 {
@@ -77,7 +77,7 @@ fn generate(n: i32) -> String {
 fn generate_all(how_many: i32, size_of_str: i32) {
     assert!(
         size_of_str % 2 == 0,
-        "Size of Word must be even;\n See cargo run help"
+        "Size of Word must be even; See `cargo run help`"
     );
     for _ in 0..how_many {
         println!("{}", generate(size_of_str));
