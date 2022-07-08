@@ -1,5 +1,10 @@
 # Random Name Generator in Rust
 
+Confused about naming your project? 
+
+Try these names ... they are bad I know, but it's good to have something than having nothing.
+
+
 ## Quick Start
 
 ```console
