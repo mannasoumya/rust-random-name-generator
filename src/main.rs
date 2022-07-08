@@ -2,7 +2,6 @@ extern crate rand;
 use rand::*;
 use std::env;
 use std::process;
-#[allow(non_snake_case)]
 fn main() {
     let args: Vec<String> = env::args().collect();
     let (how_many, size_of_str) = validate_args(args);
@@ -12,7 +11,7 @@ fn main() {
 fn validate_args(args: Vec<String>) -> (i32, i32) {
     let len: i32 = args.len() as i32;
     if len == 1 {
-        println!("\nDefaulting to 6 characters length and 6 total words");
+        println!("\nDefaulting to 6 characters length and 6 total words\n---------------------------------------------------");
         return (6, 6);
     }
     for arg in &args {
@@ -72,7 +71,6 @@ fn generate(n: i32) -> String {
 
 fn generate_all(how_many: i32, size_of_str: i32) {
     assert!(size_of_str % 2 == 0, "Size of Word must be even;\n See cargo run help");
-    // println!("\n");
     for _ in 0..how_many {
         println!("{}", generate(size_of_str));
     }
