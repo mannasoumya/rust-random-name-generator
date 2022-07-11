@@ -19,29 +19,28 @@ cargo run <how-many-words> <number-of-characters>
 <number-of-characters> : integer (Note: <number-of-characters> must be even)
 
 $ cargo run
-    Finished dev [unoptimized + debuginfo] target(s) in 0.00s
+    Finished dev [unoptimized + debuginfo] target(s) in 0.01s
      Running `target/debug/random_name_generator`
 
 Defaulting to 6 characters length and 6 total words
 ---------------------------------------------------
-UFOWUK
-EBUBOD
-UYAWIP
-UVISAN
-EMOPUH
-AXUTAD
+FUYAKE
+MEDEZO
+HEDESI
+VILANI
+SOTAPO
+QUJESA
 $ cargo run 10 8
     Finished dev [unoptimized + debuginfo] target(s) in 0.01s
      Running `target/debug/random_name_generator 10 8`
-AXASIVES
-ILIVUZEL
-IDUBINEL
-ACAWAJIW
-OLEYIVEC
-ITAGITIG
-OHUDISAW
-AWOSEROP
-EDOVOKUS
-OHAHIQEX
-
+JEPIFUWE
+RIPARIVU
+GEGUDOBO
+PIJILAGE
+GINEPAQU
+KUPURAFE
+XOKENEPA
+NEMIQIXO
+DOJOQIGA
+SARIDIGI
 ```
