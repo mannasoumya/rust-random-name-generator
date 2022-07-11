@@ -66,8 +66,8 @@ fn generate(n: i32) -> String {
         let mut rng = rand::thread_rng();
         let index_vow = rng.gen_range(0, len_vow) as usize;
         let index_con = rng.gen_range(0, len_con) as usize;
-        let c1 = vowels[index_vow];
-        let c2 = consonants[index_con];
+        let c1 = consonants[index_con];
+        let c2 = vowels[index_vow];
         res.push(c1);
         res.push(c2);
     }
