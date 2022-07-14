@@ -9,11 +9,6 @@ fn main() {
 }
 
 fn validate_args(args: Vec<String>) -> (i32, i32) {
-    let len: i32 = args.len() as i32;
-    if len == 1 {
-        println!("\nDefaulting to 6 characters length and 6 total words\n---------------------------------------------------");
-        return (6, 6);
-    }
     for arg in &args {
         if arg == "help" {
             println!("\nUsage:\ncargo run <how-many-words> <number-of-characters>");
@@ -23,6 +18,11 @@ fn validate_args(args: Vec<String>) -> (i32, i32) {
             );
             process::exit(0x0000);
         }
+    }
+    let len: i32 = args.len() as i32;
+    if len == 1 {
+        println!("\nDefaulting to 6 characters length and 6 total words\n---------------------------------------------------");
+        return (6, 6);
     }
     let how_many: i32;
     let mut size_of_str: i32;
